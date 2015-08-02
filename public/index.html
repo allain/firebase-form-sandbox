@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Event Apps Kickoff</title>
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+text: <input type="text" value="" name="text" data-path="/text"/> <br>
+number: <input type="number" value="" name="number" data-path="/number"/> <br>
+textarea: <textarea data-path="/textarea"></textarea> <br>
+checkbox: <input type="checkbox" data-path="/checkbox"/> <br>
+<div data-path="contacts" data-type="collection">
+    <fieldset>
+        <legend>Contact Info</legend>
+        First: <input type="text" data-path="first"/>
+        Last: <input type="text" data-path="last"/>
+        Email: <input type="email" data-path="email"/>
+        Photo: <div style="max-width: 100px; max-height: 100px; display: inline-block; vertical-align: middle; background-color:black;" >
+            <img data-path="photo" style="max-width: 100px;"/>
+            <button data-action="remove" data-path="photo" style="display: block; width: 100%">Delete Photo</button>
+          </div>
+        <input type="file" data-path="photo" />
+        <button data-action="remove" data-path=".">Delete</button>
+    </fieldset>
+</div>
+<button data-action="add" data-path="contacts">Add</button>
+
+<script src="/bundle.js"></script>
+</body>
+</html>
